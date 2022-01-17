@@ -35,3 +35,20 @@ def normalize_bounding_box(bounding_box, width, height, source_format="pascal_vo
     normalized_bounding_box = transform_bounding_box(bounding_box=normalized_bounding_box, source_format="pascal_voc", target_format=source_format, rounding=False)
     
     return normalized_bounding_box
+
+def unnormalize_bounding_box(bounding_box, width, height, source_format="pascal_voc"):
+    assert width >= 0, f"'width' must be in range (0, +inf), but given {width}."
+    assert height >= 0, "'height' must be in range (0, +inf), but given {height}."
+    
+    x_min, y_min, x_max, y_max = transform_bounding_box(bounding_box=bounding_box, source_format=source_format, target_format="pascal_voc")
+    
+    unnormalized_x_max = x_max * width
+    unnormalized_x_min = x_min * width
+    
+    unnormalized_y_max = y_max * height
+    unnormalized_y_min = y_min * height
+    
+    unnormalized_bounding_box = np.array((unnormalized_x_min, unnormalized_y_min, unnormalized_x_max, unnormalized_y_max)) 
+    unnormalized_bounding_box = transform_bounding_box(bounding_box=unnormalized_bounding_box, source_format="pascal_voc", target_format=source_format, rounding=True)
+    
+    return unnormalized_bounding_box
