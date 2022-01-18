@@ -2,6 +2,12 @@
 
 # Installation
 
+
+# TODO
+1. Intersection with the image.
+2. Bounding Boxes class.
+3. Add doc strings.
+
 # Requirements
 - numpy==1.19.5
 - scipy==1.6.1
