@@ -4,14 +4,14 @@
 
 
 # TODO
-1. Intersection with the image.
-2. Bounding Box class.
-3. Add docstrings.
+1. Detect bounding box format.
+3. Bounding Box class.
 4. Visibility of bounding box.
-5. Absolute bounding box's position.
-6. Get bounding boxes from a string.
-7. Visualization utils.
-
+5. Visualization: bounding box, class, and probability.
+6. Short functions.
+7. Geometric functions: intersection, area, coordinates, and perimeter.
+8. Rename some functions.
+9. Tests.
 
 # Requirements
 - numpy==1.19.5
