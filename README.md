@@ -7,7 +7,7 @@
 1. Intersection with the image.
 2. Bounding Box class.
 3. Add docstrings.
-4. Checking.
+4. Visibility of bounding box.
 5. Absolute bounding box's position.
 6. Get bounding boxes from a string.
 7. Visualization utils.
